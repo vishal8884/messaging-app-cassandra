@@ -12,7 +12,7 @@ public class Folder {
 	@PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
 	private String id;
 	
-	@PrimaryKeyColumn(name = "label", ordinal = 0, type = PrimaryKeyType.CLUSTERED)  //If we give cluster all the uerIdAndLabel will be in one node only instead of spreading out
+	@PrimaryKeyColumn(name = "label", ordinal = 0, type = PrimaryKeyType.CLUSTERED)  //If we give cluster all the userIdAndLabel will be in one node only instead of spreading out
 	private String label;
 	
 	@CassandraType(type = Name.TEXT)

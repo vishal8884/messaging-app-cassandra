@@ -49,7 +49,7 @@
 
 		footer {
 			grid-area: footer;
-		}
+		 	}
 	</style>
 </head>
 
@@ -72,19 +72,8 @@
 		</nav>
 
 		<main>
-			<div class="card" th:if="${emailList}">
-				<div class="card-header">Folders</div>
-				<div class="card-body">
-					<div class="list-group">
-						<a th:each="email : ${emailList}" href="#" class="list-group-item list-group-item-action">
-							<div class="d-flex w-100 justify-content-between">
-								<h5 class="mb-1" th:text="${email.subject}">List group item heading</h5>
-								<small th:text="${email.agoTime}">3 days ago</small>
-							</div>
-							<p class="mb-1" th:text="${email.to}">Some placeholder content in a paragraph.</p>
-						</a>
-					</div>
-				</div>
+			<div class="card">
+				<p th:text="${email.subject}"></p>
 			</div>
 		</main>
 		</main>
